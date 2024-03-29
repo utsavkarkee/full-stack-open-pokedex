@@ -1,4 +1,9 @@
 module.exports = {
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "env": {
     "browser": true,
     "es6": true,
@@ -29,7 +34,7 @@ module.exports = {
     ],
     "quotes": [
       "error",
-      "double"
+      "single"
     ],
     "eqeqeq": "error",
     "no-trailing-spaces": "error",
