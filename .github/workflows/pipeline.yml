@@ -34,13 +34,13 @@ jobs:
         run: |
           curl "$deploy_url"
   tag_release:
-    if: github.event.pull_request.merged == true
     permissions:
       contents: write
     needs:
       - simple_deployment_pipeline
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/checkout@v4
       - name: github context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
